@@ -9,5 +9,7 @@ namespace CarteleriaDigital
     class BannerRSS
     {
         public BannerRSS() { }
+
+        ///Probando
     }
 }
