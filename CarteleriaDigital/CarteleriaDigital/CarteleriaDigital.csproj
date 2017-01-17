@@ -44,8 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banner.cs" />
+    <Compile Include="BannerRSS.cs" />
+    <Compile Include="BannerSimple.cs" />
+    <Compile Include="Campania.cs" />
+    <Compile Include="FuenteRSS.cs" />
+    <Compile Include="Imagen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rango.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
