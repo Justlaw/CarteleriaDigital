@@ -113,6 +113,7 @@
             this.Name = "Campaña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Campaña";
+            this.Load += new System.EventHandler(this.Campaña_Load);
             this.ResumeLayout(false);
 
         }

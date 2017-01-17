@@ -29,5 +29,10 @@ namespace CarteleriaDigital
         {
 
         }
+
+        private void Campaña_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -24,5 +24,10 @@ namespace CarteleriaDigital.Pantallas
                 Application.Exit();
             }
         }
+
+        private void PanBannerSimple_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

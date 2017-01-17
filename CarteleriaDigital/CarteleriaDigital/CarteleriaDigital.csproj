@@ -51,7 +51,7 @@
     <Compile Include="Clase\Campania.cs" />
     <Compile Include="Clase\FuenteRSS.cs" />
     <Compile Include="Clase\Imagen.cs" />
-    <Compile Include="Clase\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Pantallas\Campaña.cs">
       <SubType>Form</SubType>
     </Compile>
