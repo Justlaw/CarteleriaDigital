@@ -51,6 +51,12 @@
     <Compile Include="Clase\Campania.cs" />
     <Compile Include="Clase\FuenteRSS.cs" />
     <Compile Include="Clase\Imagen.cs" />
+    <Compile Include="Pantallas\AgregarCampaña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\AgregarCampaña.Designer.cs">
+      <DependentUpon>AgregarCampaña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Pantallas\Campaña.cs">
       <SubType>Form</SubType>
@@ -82,6 +88,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Pantallas\AgregarCampaña.resx">
+      <DependentUpon>AgregarCampaña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Campaña.resx">
       <DependentUpon>Campaña.cs</DependentUpon>
     </EmbeddedResource>

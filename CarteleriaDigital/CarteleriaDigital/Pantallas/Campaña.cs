@@ -27,7 +27,9 @@ namespace CarteleriaDigital
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Pantallas.AgregarCampaña abrir = new Pantallas.AgregarCampaña();
+            abrir.Show();
+            this.SetVisibleCore(false);
         }
 
         private void Campaña_Load(object sender, EventArgs e)
