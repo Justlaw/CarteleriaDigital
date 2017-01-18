@@ -41,16 +41,14 @@ namespace CarteleriaDigital.Pantallas
             {
                 Campaña abrir = new Campaña();
                 abrir.Show();
-                this.SetVisibleCore(false); 
+                this.SetVisibleCore(false);
 
             }
-            AgregarCampaña cerrar = new AgregarCampaña();
-            cerrar.Hide();
-            this.SetVisibleCore(false);
+        }
 
-            Campaña abrir = new Campaña();
-            abrir.Show();
-            
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
