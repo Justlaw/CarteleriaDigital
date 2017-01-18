@@ -21,7 +21,8 @@ namespace CarteleriaDigital.Pantallas
         {
             // Displays an OpenFileDialog so the user can select a Cursor.
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Cursor Files|*.cur";
+            openFileDialog1.Filter = "Cursor Files|*.jpg";
+            openFileDialog1.Filter = "Cursor Files|*.png";
             openFileDialog1.Title = "Select a Cursor File";
 
             // Show the Dialog.
@@ -31,13 +32,20 @@ namespace CarteleriaDigital.Pantallas
             {
                 // Assign the cursor in the Stream to the Form's Cursor property.
                 this.Cursor = new Cursor(openFileDialog1.OpenFile());
+                
             }
         }
 
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Está seguro que desea cancelar?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
 
+                Campaña abrir = new Campaña();
+                abrir.Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,6 +60,11 @@ namespace CarteleriaDigital.Pantallas
 
             Campaña abrir = new Campaña();
             abrir.Show();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }
