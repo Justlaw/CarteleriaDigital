@@ -34,23 +34,25 @@ namespace CarteleriaDigital.Pantallas
             }
         }
 
- 
+
         private void button3_Click(object sender, EventArgs e)
         {
- 
-         }
- 
-         private void button2_Click(object sender, EventArgs e)
-         {
-             if (MessageBox.Show("La campaña ha sido agregada exitosamente", "Advertencia", MessageBoxButtons.OK) == DialogResult.Yes )
-            {
-                 this.Close();
-            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            if (MessageBox.Show("La campaña ha sido agregada exitosamente", "Advertencia", MessageBoxButtons.OK) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            AgregarCampaña cerrar = new AgregarCampaña();
+            cerrar.Hide();
+            this.SetVisibleCore(false);
+
+            Campaña abrir = new Campaña();
+            abrir.Show();
+
         }
     }
 }
