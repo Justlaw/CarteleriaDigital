@@ -19,13 +19,41 @@ namespace CarteleriaDigital.Pantallas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                System.IO.StreamReader sr = new
-                   System.IO.StreamReader(openFileDialog1.FileName);
-                MessageBox.Show(sr.ReadToEnd());
-                sr.Close();
+                // Displays an OpenFileDialog so the user can select a Cursor.
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "Cursor Files|*.cur";
+                openFileDialog1.Title = "Select a Cursor File";
+
+                // Show the Dialog.
+                // If the user clicked OK in the dialog and
+                // a .CUR file was selected, open it.
+                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    // Assign the cursor in the Stream to the Form's Cursor property.
+                    this.Cursor = new Cursor(openFileDialog1.OpenFile());
+                }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("La campaña ha sido agregada exitosamente", "Advertencia", MessageBoxButtons.OK) == DialogResult.Yes )
+            {
+                this.Close();
+            }
+            AgregarCampaña cerrar = new AgregarCampaña();
+            cerrar.Hide();
+            this.SetVisibleCore(false);
+
+            Campaña abrir = new Campaña();
+            abrir.Show();
+            
         }
     }
 }
