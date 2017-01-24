@@ -19,10 +19,19 @@ namespace CarteleriaDigital.Pantallas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea salir?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+           
+                if (MessageBox.Show("¿Está seguro que desea salir?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    this.SetVisibleCore(false);
+
+                    Campaña cerrar = new Campaña();
+                    cerrar.Hide();
+                    this.SetVisibleCore(false);
+
+                    PantallaInicio abrir = new PantallaInicio();
+                    abrir.Show();
+                }
+           
         }
 
         private void PanBannerSimple_Load(object sender, EventArgs e)
