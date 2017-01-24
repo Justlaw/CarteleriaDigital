@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarteleriaDigital
 {
-    public partial class Form1 : Form
+    public partial class PantallaInicio : Form
     {
-        public Form1()
+        public PantallaInicio()
         {
             InitializeComponent();
         }
@@ -37,6 +37,11 @@ namespace CarteleriaDigital
             Campaña abrir = new Campaña();
             abrir.Show();
             this.SetVisibleCore(false);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

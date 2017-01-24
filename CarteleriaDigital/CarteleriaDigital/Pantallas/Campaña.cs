@@ -22,6 +22,13 @@ namespace CarteleriaDigital
             if (MessageBox.Show("¿Está seguro que desea salir?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.SetVisibleCore(false);
+
+                Campaña cerrar = new Campaña();
+                cerrar.Hide();
+                this.SetVisibleCore(false);
+
+                PantallaInicio abrir = new PantallaInicio();
+                abrir.Show();
             }
         }
 

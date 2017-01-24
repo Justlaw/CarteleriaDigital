@@ -34,6 +34,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Teal;
             this.button1.Location = new System.Drawing.Point(540, 372);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 27);
@@ -50,6 +51,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PanBannerSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PanBannerSimple";

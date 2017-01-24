@@ -45,6 +45,7 @@ namespace CarteleriaDigital.Pantallas
 
                 Campaña abrir = new Campaña();
                 abrir.Show();
+
             }
         }
 
