@@ -20,7 +20,7 @@ namespace CarteleriaDigital.Pantallas
         private void button1_Click(object sender, EventArgs e)
         {
            
-                if (MessageBox.Show("¿Está seguro que desea salir?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
+               // if (MessageBox.Show("¿Está seguro que desea salir?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     this.SetVisibleCore(false);
 
@@ -28,7 +28,7 @@ namespace CarteleriaDigital.Pantallas
                     cerrar.Hide();
                     this.SetVisibleCore(false);
 
-                    PantallaInicio abrir = new PantallaInicio();
+                    ElegirBanner abrir = new ElegirBanner();
                     abrir.Show();
                 }
            

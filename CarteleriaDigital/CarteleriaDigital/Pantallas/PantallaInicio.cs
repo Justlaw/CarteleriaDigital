@@ -19,7 +19,7 @@ namespace CarteleriaDigital
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Pantallas.PanBannerSimple abrir = new Pantallas.PanBannerSimple();
+            ElegirBanner abrir = new ElegirBanner();
             abrir.Show();
             this.SetVisibleCore(false);
         }
@@ -40,6 +40,11 @@ namespace CarteleriaDigital
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
