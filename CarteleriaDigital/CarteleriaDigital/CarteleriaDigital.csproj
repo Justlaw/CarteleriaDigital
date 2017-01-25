@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pantallas\ElegirBanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\ElegirBanner.Designer.cs">
+      <DependentUpon>ElegirBanner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clase\Banner.cs" />
     <Compile Include="Clase\BannerRSS.cs" />
     <Compile Include="Clase\BannerSimple.cs" />
@@ -88,6 +94,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Pantallas\ElegirBanner.resx">
+      <DependentUpon>ElegirBanner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\AgregarCampaña.resx">
       <DependentUpon>AgregarCampaña.cs</DependentUpon>
     </EmbeddedResource>
