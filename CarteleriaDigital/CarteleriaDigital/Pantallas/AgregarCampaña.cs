@@ -18,21 +18,17 @@ namespace CarteleriaDigital.Pantallas
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            // Displays an OpenFileDialog so the user can select a Cursor.
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Cursor Files|*.jpg";
-            openFileDialog1.Filter = "Cursor Files|*.png";
-            openFileDialog1.Title = "Select a Cursor File";
 
-            // Show the Dialog.
-            // If the user clicked OK in the dialog and
-            // a .CUR file was selected, open it.
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+        {
+            OpenFileDialog getImage = new OpenFileDialog();
+            getImage.InitialDirectory = "C:\\";
+            getImage.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+
+            if (getImage.ShowDialog() == DialogResult.OK)
             {
-                // Assign the cursor in the Stream to the Form's Cursor property.
-                this.Cursor = new Cursor(openFileDialog1.OpenFile());
+                pictureBox1.ImageLocation = getImage.FileName;
                 
+          
             }
         }
 
@@ -65,6 +61,16 @@ namespace CarteleriaDigital.Pantallas
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
