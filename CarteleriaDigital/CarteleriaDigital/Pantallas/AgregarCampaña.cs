@@ -24,17 +24,23 @@ namespace CarteleriaDigital.Pantallas
            
             openFileDialog1.InitialDirectory = "C:\\";
             openFileDialog1.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+            openFileDialog1.FilterIndex = 1;
+
+            //openFileDialog1.Multiselect = true;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.ImageLocation = openFileDialog1.FileName;
                                         
             }
-            
+
             OpenFileDialog openFileDialog2 = new OpenFileDialog();
 
             openFileDialog2.InitialDirectory = "C:\\";
             openFileDialog2.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+            openFileDialog2.FilterIndex = 2;
+
+            openFileDialog2.Multiselect = true;
 
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
@@ -42,6 +48,7 @@ namespace CarteleriaDigital.Pantallas
 
             }
 
+            
         }
 
 
