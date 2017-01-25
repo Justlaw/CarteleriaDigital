@@ -20,17 +20,28 @@ namespace CarteleriaDigital.Pantallas
         private void button1_Click(object sender, EventArgs e)
 
         {
-            OpenFileDialog getImage = new OpenFileDialog();
-            getImage.InitialDirectory = "C:\\";
-            getImage.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+           
+            openFileDialog1.InitialDirectory = "C:\\";
+            openFileDialog1.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
 
-            if (getImage.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.ImageLocation = getImage.FileName;
-                //hj
-                
-          
+                pictureBox1.ImageLocation = openFileDialog1.FileName;
+                                        
             }
+            
+            OpenFileDialog openFileDialog2 = new OpenFileDialog();
+
+            openFileDialog2.InitialDirectory = "C:\\";
+            openFileDialog2.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox2.ImageLocation = openFileDialog2.FileName;
+
+            }
+
         }
 
 
