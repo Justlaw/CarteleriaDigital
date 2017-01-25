@@ -27,6 +27,7 @@ namespace CarteleriaDigital.Pantallas
             if (getImage.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.ImageLocation = getImage.FileName;
+                //hj
                 
           
             }
