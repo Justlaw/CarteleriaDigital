@@ -20,35 +20,21 @@ namespace CarteleriaDigital.Pantallas
         private void button1_Click(object sender, EventArgs e)
 
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-           
-            openFileDialog1.InitialDirectory = "C:\\";
-            openFileDialog1.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog1.FilterIndex = 1;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            //openFileDialog1.Multiselect = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            openFileDialog.InitialDirectory = "C:/Imágenes";
+            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.Multiselect = true;
+                        
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.ImageLocation = openFileDialog1.FileName;
-                                        
-            }
+                pictureBox1.ImageLocation = openFileDialog.FileName;
+                                         
+            } 
 
-            OpenFileDialog openFileDialog2 = new OpenFileDialog();
 
-            openFileDialog2.InitialDirectory = "C:\\";
-            openFileDialog2.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog2.FilterIndex = 2;
-
-            openFileDialog2.Multiselect = true;
-
-            if (openFileDialog2.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox2.ImageLocation = openFileDialog2.FileName;
-
-            }
-
-            
+                                  
         }
 
 
@@ -81,7 +67,11 @@ namespace CarteleriaDigital.Pantallas
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+           /* if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = openFileDialog1.FileName;
 
+            } */
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
