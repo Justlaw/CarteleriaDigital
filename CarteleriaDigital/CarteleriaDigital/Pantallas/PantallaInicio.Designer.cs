@@ -59,7 +59,7 @@
             // button3
             // 
             this.button3.ForeColor = System.Drawing.Color.Teal;
-            this.button3.Location = new System.Drawing.Point(197, 226);
+            this.button3.Location = new System.Drawing.Point(197, 215);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
