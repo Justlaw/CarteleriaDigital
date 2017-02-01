@@ -55,6 +55,12 @@
     <Compile Include="DAO\Conexion.cs" />
     <Compile Include="DAO\ImagenDAO.cs" />
     <Compile Include="DAO\RangoDAO.cs" />
+    <Compile Include="DTO\BannerDTO.cs" />
+    <Compile Include="DTO\BannerRSSDTO.cs" />
+    <Compile Include="DTO\BannerSimpleDTO.cs" />
+    <Compile Include="DTO\CampañaDTO.cs" />
+    <Compile Include="DTO\ImagenDTO.cs" />
+    <Compile Include="DTO\RangoDTO.cs" />
     <Compile Include="Pantallas\ElegirBanner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
