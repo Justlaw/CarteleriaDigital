@@ -68,8 +68,7 @@ namespace CarteleriaDigital.Pantallas
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = null;
-            
+            pictureBox1.Image = null;            
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -300,39 +299,40 @@ namespace CarteleriaDigital.Pantallas
 
         }
 
-       /* private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-            //var img = pictureBox1.Image;
-            //if (img == null) return;
-            //if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
-            //{
-            //    pictureBox1.Image = null;
-            //}
-            
-            PictureBox pb = (PictureBox)sender;
-            pb.Select();
-            pb.DoDragDrop(pb.Image, DragDropEffects.Move);
+        
+       /*  private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+         {
+             //var img = pictureBox1.Image;
+             //if (img == null) return;
+             //if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
+             //{
+             //    pictureBox1.Image = null;
+             //}
 
-        }
+             PictureBox pb = (PictureBox)sender;
+             pb.Select();
+             pb.DoDragDrop(pb.Image, DragDropEffects.Move);
 
-        private void pictureBox1_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.Bitmap))
-            {
-                e.Effect = DragDropEffects.Move;
-            }
-            else
-            {
-                e.Effect = DragDropEffects.None;
-            }
+         }
 
-        }
+         private void pictureBox1_DragEnter(object sender, DragEventArgs e)
+         {
+             if (e.Data.GetDataPresent(DataFormats.Bitmap))
+             {
+                 e.Effect = DragDropEffects.Move;
+             }
+             else
+             {
+                 e.Effect = DragDropEffects.None;
+             }
 
-        private void pictureBox1_DragDrop(object sender, DragEventArgs e)
-        {
-            PictureBox pb = (PictureBox)sender;
-            pb.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+         }
 
-        } */
+         private void pictureBox1_DragDrop(object sender, DragEventArgs e)
+         {
+             PictureBox pb = (PictureBox)sender;
+             pb.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+
+         } */
     }
 }
