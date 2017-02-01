@@ -11,12 +11,14 @@ namespace CarteleriaDigital
         private Boolean iActivo;
         private String iNombre;
         private List<Imagen> iListaImagenes;
+        private Rango iRango;
 
-        public Campania(Boolean pActivo, String pNombre, List<Imagen> pListaImagenes)
+        public Campania(Boolean pActivo, String pNombre, List<Imagen> pListaImagenes, Rango pRango)
         {
-            this.iActivo = pActivo;
-            this.iNombre = pNombre;
-            this.iListaImagenes = pListaImagenes;
+            iActivo = pActivo;
+            iNombre = pNombre;
+            iListaImagenes = pListaImagenes;
+            iRango = pRango;
         }
 
         public Boolean Activo
@@ -35,6 +37,11 @@ namespace CarteleriaDigital
         {
             get { return this.iListaImagenes; }
             set { this.iListaImagenes = value; }
+        }
+
+        public Rango Rango { 
+            get { return this.iRango; }
+            set { iRango = value; }
         }
     }
 }

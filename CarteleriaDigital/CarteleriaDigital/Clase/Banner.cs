@@ -10,6 +10,7 @@ namespace CarteleriaDigital
     {
         public Boolean iActivo;
         public String iNombre;
+        public Rango iRango;
 
         public Boolean Activo
         {
@@ -21,6 +22,12 @@ namespace CarteleriaDigital
         {
             get { return this.Nombre; }
             set { this.iNombre = value; }
+        }
+
+        public Rango Rango
+        {
+            get { return this.iRango; }
+            set { iRango = value; }
         }
     }
 }
