@@ -26,7 +26,7 @@ namespace CarteleriaDigital
 
         public String Nombre
         {
-            get { return this.Nombre; }
+            get { return this.iNombre; }
             set { this.iNombre = value; }
         }
 
