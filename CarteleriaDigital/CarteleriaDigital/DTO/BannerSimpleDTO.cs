@@ -8,8 +8,12 @@ namespace CarteleriaDigital.DTO
 {
     class BannerSimpleDTO
     {
-        private int idBannerSimple { get; set; }
-        private int idBanner { get; set; }
+        //Atributos
+        private int? idBannerSimple { get; set; }
+        private int? idBanner { get; set; }
         private string texto { get; set; }
+
+        //Constructor
+        public BannerSimpleDTO() { }
     }
 }

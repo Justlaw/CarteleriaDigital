@@ -8,7 +8,11 @@ namespace CarteleriaDigital.DTO
 {
     class BannerRSSDTO
     {
-        private int idBannerRSS { get; set; }
-        private int idBanner { get; set; }
+        //Atributos, getters y setters
+        private int? idBannerRSS { get; set; }
+        private int? idBanner { get; set; }
+
+        //Constructor
+        public BannerRSSDTO() {}
     }
 }

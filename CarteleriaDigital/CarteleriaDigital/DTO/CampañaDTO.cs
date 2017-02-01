@@ -8,9 +8,13 @@ namespace CarteleriaDigital.DTO
 {
     class CampañaDTO
     {
-        private int iIdCampaña { get; set; }
-        private int iIdRango { get; set; }
+        //Atributos, getters y setters
+        private int? iIdCampaña { get; set; }
+        private int? iIdRango { get; set; }
         private bool iActivo { get; set; }
         private String iNombre { get; set; }
+
+        //Constructor
+        public CampañaDTO() { }
     }
 }
