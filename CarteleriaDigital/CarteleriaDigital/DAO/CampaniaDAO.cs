@@ -19,9 +19,9 @@ namespace CarteleriaDigital.DAO
                     "rango(nombre, activo, listaimagenes) VALUES(:nombre, :activo, :listaimagenes)", con.connection);
                 // Add paramaters.
                 command.Parameters.Add(new NpgsqlParameter("nombre",
-                    NpgsqlTypes.NpgsqlDbType.Integer));
-                command.Parameters.Add(new NpgsqlParameter("activo",
                     NpgsqlTypes.NpgsqlDbType.Varchar));
+                command.Parameters.Add(new NpgsqlParameter("activo",
+                    NpgsqlTypes.NpgsqlDbType.Boolean));
                 command.Parameters.Add(new NpgsqlParameter("listaimagenes",
                     NpgsqlTypes.NpgsqlDbType.Array));
 
