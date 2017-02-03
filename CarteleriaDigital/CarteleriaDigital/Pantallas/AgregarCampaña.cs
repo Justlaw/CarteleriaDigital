@@ -92,154 +92,19 @@ namespace CarteleriaDigital.Pantallas
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.ImageLocation = openFileDialog.FileName;
+                if (pictureBox1.Image == null) { pictureBox1.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox2.Image == null) { pictureBox2.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox3.Image == null) { pictureBox3.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox4.Image == null) { pictureBox4.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox5.Image == null) { pictureBox5.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox6.Image == null) { pictureBox6.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox7.Image == null) { pictureBox7.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox8.Image == null) { pictureBox8.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox9.Image == null) { pictureBox9.ImageLocation = openFileDialog.FileName; }
+                else if (pictureBox10.Image == null) { pictureBox10.ImageLocation = openFileDialog.FileName; }
 
             }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox2.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox3.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox4.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox5.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox6.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox7.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox8.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox9.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.InitialDirectory = "C:/Imágenes";
-            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox10.ImageLocation = openFileDialog.FileName;
-
-            }
-        }
+        }        
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
