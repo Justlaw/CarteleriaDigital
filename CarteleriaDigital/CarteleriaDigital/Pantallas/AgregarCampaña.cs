@@ -56,21 +56,30 @@ namespace CarteleriaDigital.Pantallas
             if ((textBox1.Text == ""))
             {
                 MessageBox.Show("Falta ingresar el nombre de la campaña");
-                this.Show();
+                
             }
 
 
             else if (MessageBox.Show("La campaña ha sido agregada exitosamente", "Advertencia", MessageBoxButtons.OK) == DialogResult.Yes)
             {
-                this.Close();
-            }
+               // this.Close();
 
                 AgregarCampaña cerrar = new AgregarCampaña();
                 cerrar.Hide();
                 this.SetVisibleCore(false);
-
+                                
                 Campaña abrir = new Campaña();
                 abrir.Show();
+                                
+                
+            }
+
+               /* AgregarCampaña cerrar = new AgregarCampaña();
+                cerrar.Hide();
+                this.SetVisibleCore(false);
+
+                Campaña abrir = new Campaña();
+                abrir.Show(); */
             
         }
 
