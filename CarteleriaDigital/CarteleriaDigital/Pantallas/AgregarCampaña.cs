@@ -55,14 +55,14 @@ namespace CarteleriaDigital.Pantallas
         {
             if ((textBox1.Text == ""))
             {
-                MessageBox.Show("Falta ingresar el nombre de la campaña");
+                MessageBox.Show("Falta ingresar el nombre de la campaña", "Advertencia");
                 
             }
 
 
             else
             {
-                MessageBox.Show("La campaña ha sido agregada exitosamente", "Advertencia", MessageBoxButtons.OK);
+                MessageBox.Show("La campaña ha sido agregada exitosamente", "Atención", MessageBoxButtons.OK);
                 this.Close();
                 Campaña abrir = new Campaña();
                 abrir.Show();
