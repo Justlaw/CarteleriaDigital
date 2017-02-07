@@ -85,6 +85,12 @@
     <Compile Include="Pantallas\AgregarCampaña.Designer.cs">
       <DependentUpon>AgregarCampaña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Eliminar.Designer.cs">
+      <DependentUpon>Eliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Pantallas\Campaña.cs">
       <SubType>Form</SubType>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Campaña.resx">
       <DependentUpon>Campaña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Eliminar.resx">
+      <DependentUpon>Eliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\PanBannerSimple.resx">
       <DependentUpon>PanBannerSimple.cs</DependentUpon>
