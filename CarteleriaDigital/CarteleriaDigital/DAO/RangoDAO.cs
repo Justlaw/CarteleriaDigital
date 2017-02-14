@@ -4,20 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using CarteleriaDigital.DTO;
 
 
 namespace CarteleriaDigital.DAO
 {
     class RangoDAO
     {
-        public void insertar(Conexion con, Rango ran)
+        public void insertar(RangoDTO ranDto)
         {
+
+            Conexion con = new Conexion();
+
             try
             {
-                con.openConection();
+
+
                 // Create insert command.
                 NpgsqlCommand command = new NpgsqlCommand("INSERT INTO " +
-                    "rango(fechainicio, fechafin, horainicio, horafin) VALUES(:fechainicio, :fechafin, :horainicio, :horafin)", con.connection);
+                    "rango(fechainicio, fechafin, horainicio, horafin) VALUES(:fechainicio, :fechafin, :horainicio, :horafin)");
+                
                 // Add paramaters.
                 command.Parameters.Add(new NpgsqlParameter("fechainicio",
                     NpgsqlTypes.NpgsqlDbType.Date));
@@ -32,10 +38,10 @@ namespace CarteleriaDigital.DAO
                 command.Prepare();
 
                 // Add value to the paramater.
-                command.Parameters[0].Value = ran.FechaInicio.Date;
-                command.Parameters[1].Value = ran.FechaFin.Date;
-                command.Parameters[2].Value = ran.HoraInicio.TimeOfDay;
-                command.Parameters[3].Value = ran.HoraFin.TimeOfDay;
+                command.Parameters[0].Value = ranDto.FechaInicio;
+                command.Parameters[1].Value = ranDto.FechaFin.Date;
+                command.Parameters[2].Value = ranDto.HoraInicio.TimeOfDay;
+                command.Parameters[3].Value = ranDto.HoraFin.TimeOfDay;
 
 
                 // Execute SQL command.

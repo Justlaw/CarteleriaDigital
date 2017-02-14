@@ -16,7 +16,7 @@ namespace CarteleriaDigital.DAO
                 con.openConection();
                 // Create insert command.
                 NpgsqlCommand command = new NpgsqlCommand("INSERT INTO " +
-                    "rango(duracion, rutaimagen) VALUES(:duracion, :rutaimagen)", con.connection);
+                    "rango(duracion, rutaimagen) VALUES(:duracion, :rutaimagen)");
                 
                 // Add paramaters.
                 command.Parameters.Add(new NpgsqlParameter("fechainicio",

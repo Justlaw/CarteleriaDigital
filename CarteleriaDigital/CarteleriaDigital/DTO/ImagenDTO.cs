@@ -8,14 +8,73 @@ namespace CarteleriaDigital.DTO
 {
     class ImagenDTO
     {
-        //Atributos
-        private int? iIdImagen { get; set; }
-        private int? iIdCampaña { get; set; }
-        private String iRutaImagen { get; set; }
-        private short iDuracion { get; set; }
+        #region Atributos
+        private int? idImagen;
+        private int? idCampaña;
+        private string rutaImagen;
+        private short duracion;
+        #endregion
 
+        #region Constructores
         //Constructor
         public ImagenDTO() { }
+        #endregion
+
+
+        #region Get&Set
+        public int? IdImagen
+        {
+            get
+            {
+                return idImagen;
+            }
+
+            set
+            {
+                idImagen = value;
+            }
+        }
+
+        public int? IdCampaña
+        {
+            get
+            {
+                return idCampaña;
+            }
+
+            set
+            {
+                idCampaña = value;
+            }
+        }
+
+        public string RutaImagen
+        {
+            get
+            {
+                return rutaImagen;
+            }
+
+            set
+            {
+                rutaImagen = value;
+            }
+        }
+
+        public short Duracion
+        {
+            get
+            {
+                return duracion;
+            }
+
+            set
+            {
+                duracion = value;
+            }
+        }
+        #endregion
+
 
     }
 }

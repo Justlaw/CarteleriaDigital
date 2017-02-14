@@ -8,13 +8,60 @@ namespace CarteleriaDigital.DTO
 {
     class BannerDTO
     {
+        #region Atributos
         //Atributos con sus getters y setters
-        private int? idBanner { get; set; }
-        private int? idRango { get; set; }
-        private bool activo { get; set; }
-        private String nombre { get; set; }
+        private int? idBanner;
+        private int? idRango;
+        private bool activo;
+        private string nombre;
+        #endregion
 
+        #region Constructores
         //Constructor
         public BannerDTO() { }
+        #endregion
+
+        #region Get&Set
+        public int? IdBanner
+        {
+            get
+            {
+                return idBanner;
+            }
+
+            set
+            {
+                idBanner = value;
+            }
+        }
+
+        public int? IdRango
+        {
+            get
+            {
+                return idRango;
+            }
+
+            set
+            {
+                idRango = value;
+            }
+        }
+
+        public bool Activo
+        {
+            get
+            {
+                return activo;
+            }
+
+            set
+            {
+                activo = value;
+            }
+        }
+        #endregion
+
+
     }
 }

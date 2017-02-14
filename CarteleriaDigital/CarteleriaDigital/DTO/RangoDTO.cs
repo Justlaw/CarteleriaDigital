@@ -8,14 +8,86 @@ namespace CarteleriaDigital.DTO
 {
     class RangoDTO
     {
-        //Atributos, getters y setters
-        private int? iIdRango { set; get; }
-        private DateTime iFechaInicio { get; set; }
-        private DateTime iFechaFin { get; set; }
-        private DateTime iHoraInicio { get; set; }
-        private DateTime iHoraFin { get; set; }
+        #region Atributos
+        private int? idRango;
+        private DateTime fechaInicio;
+        private DateTime fechaFin;
+        private DateTime horaInicio;
+        private DateTime horaFin;
+        #endregion
 
-        //Constructor
+        #region Constructores
         public RangoDTO() { }
+        #endregion
+
+
+        #region Get&Set
+        public int? IdRango
+        {
+            get
+            {
+                return idRango;
+            }
+            
+            set
+            {
+                idRango = value;
+            }
+        }
+
+        public DateTime FechaInicio
+        {
+            get
+            {
+                return fechaInicio;
+            }
+
+            set
+            {
+                fechaInicio = value;
+            }
+        }
+
+        public DateTime FechaFin
+        {
+            get
+            {
+                return fechaFin;
+            }
+
+            set
+            {
+                fechaFin = value;
+            }
+        }
+
+        public DateTime HoraInicio
+        {
+            get
+            {
+                return horaInicio;
+            }
+
+            set
+            {
+                horaInicio = value;
+            }
+        }
+
+        public DateTime HoraFin
+        {
+            get
+            {
+                return horaFin;
+            }
+
+            set
+            {
+                horaFin = value;
+            }
+        }
+
+        #endregion
+
     }
 }
