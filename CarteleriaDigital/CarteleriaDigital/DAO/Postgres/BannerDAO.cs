@@ -14,6 +14,7 @@ namespace CarteleriaDigital.DAO
             try
             {
                 con.openConection();
+                
                 // Create insert command.
                 NpgsqlCommand command = new NpgsqlCommand("INSERT INTO " +
                     "rango(nombre, activo) VALUES(:nombre, :activo)", con.connection);
@@ -23,15 +24,13 @@ namespace CarteleriaDigital.DAO
                 command.Parameters.Add(new NpgsqlParameter("activo",
                     NpgsqlTypes.NpgsqlDbType.Boolean));
                 
-
                 // Prepare the command.
                 command.Prepare();
 
                 // Add value to the paramater.
                 command.Parameters[0].Value = ban.Nombre;
                 command.Parameters[1].Value = ban.Activo;
-
-
+                
                 // Execute SQL command.
                 Int32 recordAffected = command.ExecuteNonQuery();
                 if (Convert.ToBoolean(recordAffected))

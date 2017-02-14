@@ -37,7 +37,6 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\bin\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -49,13 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\BannerDAO.cs" />
-    <Compile Include="DAO\BannerRSSDAO.cs" />
-    <Compile Include="DAO\BannerSimpleDAO.cs" />
-    <Compile Include="DAO\CampaniaDAO.cs" />
+    <Compile Include="DAO\IBanner.cs" />
+    <Compile Include="DAO\IBannerRSS.cs" />
+    <Compile Include="DAO\IBannerSimple.cs" />
+    <Compile Include="DAO\ICampania.cs" />
+    <Compile Include="DAO\IImagen.cs" />
+    <Compile Include="DAO\IRango.cs" />
+    <Compile Include="DAO\Postgres\BannerDAO.cs" />
+    <Compile Include="DAO\Postgres\BannerRSSDAO.cs" />
+    <Compile Include="DAO\Postgres\BannerSimpleDAO.cs" />
+    <Compile Include="DAO\Postgres\CampaniaDAO.cs" />
     <Compile Include="DAO\Conexion.cs" />
-    <Compile Include="DAO\ImagenDAO.cs" />
-    <Compile Include="DAO\RangoDAO.cs" />
+    <Compile Include="DAO\Postgres\ImagenDAO.cs" />
+    <Compile Include="DAO\Postgres\RangoDAO.cs" />
     <Compile Include="DTO\BannerDTO.cs" />
     <Compile Include="DTO\BannerRSSDTO.cs" />
     <Compile Include="DTO\BannerSimpleDTO.cs" />
@@ -79,6 +84,12 @@
     </Compile>
     <Compile Include="Pantallas\AgregarCampaña.Designer.cs">
       <DependentUpon>AgregarCampaña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Eliminar.Designer.cs">
+      <DependentUpon>Eliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Pantallas\Campaña.cs">
@@ -119,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Campaña.resx">
       <DependentUpon>Campaña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\Eliminar.resx">
+      <DependentUpon>Eliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\PanBannerSimple.resx">
       <DependentUpon>PanBannerSimple.cs</DependentUpon>

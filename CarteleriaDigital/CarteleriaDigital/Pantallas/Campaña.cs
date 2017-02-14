@@ -44,5 +44,13 @@ namespace CarteleriaDigital
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            Pantallas.Eliminar abrir = new Pantallas.Eliminar();
+            abrir.Show();
+            this.SetVisibleCore(false);
+        }
     }
 }
