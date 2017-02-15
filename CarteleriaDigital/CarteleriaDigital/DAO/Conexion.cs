@@ -9,25 +9,14 @@ namespace CarteleriaDigital.DAO
 {
     class Conexion
     {
-        private const String SERVER = "localhost";
-        private const String PORT = "5432";
-        private const String USER = "postgres";
-        private const String PASSWORD = "123";
-        private const String DATABASE = "DBCarteleria";
 
+        private string stringConexion = "Server= locarhost; Port= 5432; User Id= postgres; Password= 123; Database= DBCarteleria;";
 
         public NpgsqlConnection connection = new NpgsqlConnection();
 
-        public NpgsqlConnection ConectaPostgreSQL()
+        public void ConectaPostgreSQL()
         {
-            connection = new NpgsqlConnection(
-                "Server=" + SERVER + ";" +
-                "Port=" + PORT + ";" +
-                "User Id=" + USER + ";" +
-                "Password=" + PASSWORD + ";" +
-                "Database=" + DATABASE + ";"
-            );
-            return connection;
+            connection = new NpgsqlConnection(stringConexion);
         }
 
         public void openConection()

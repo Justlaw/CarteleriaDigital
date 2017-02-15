@@ -11,19 +11,25 @@ namespace CarteleriaDigital.DAO
 {
     class RangoDAO
     {
+
+        private Conexion iConexion;
+
+        public RangoDAO(Conexion pConexion)
+        {
+            this.iConexion = pConexion;
+
+        }
+
+
         public void insertar(RangoDTO ranDto)
         {
-
-            Conexion con = new Conexion();
-
             try
             {
-
-
+                iConexion.openConection();
                 // Create insert command.
                 NpgsqlCommand command = new NpgsqlCommand("INSERT INTO " +
-                    "rango(fechainicio, fechafin, horainicio, horafin) VALUES(:fechainicio, :fechafin, :horainicio, :horafin)");
-                
+                    "rango(fechainicio, fechafin, horainicio, horafin) VALUES(:fechainicio, :fechafin, :horainicio, :horafin)", this.iConexion.connection);
+
                 // Add paramaters.
                 command.Parameters.Add(new NpgsqlParameter("fechainicio",
                     NpgsqlTypes.NpgsqlDbType.Date));
@@ -48,7 +54,7 @@ namespace CarteleriaDigital.DAO
                 Int32 recordAffected = command.ExecuteNonQuery();
                 if (Convert.ToBoolean(recordAffected))
                 {
-                   //Mostrar error
+                    //Mostrar error
                 }
             }
             catch (NpgsqlException ex)
@@ -56,7 +62,7 @@ namespace CarteleriaDigital.DAO
                 //Mostrar error
             }
 
-            con.closeConection();
+            iConexion.closeConection();
         }
 
         public void Modificar(Conexion con, Rango ran, String nombre)
