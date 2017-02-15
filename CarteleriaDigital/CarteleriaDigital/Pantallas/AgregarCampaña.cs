@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +17,7 @@ namespace CarteleriaDigital.Pantallas
         public AgregarCampaña()
         {
             InitializeComponent();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,15 +29,15 @@ namespace CarteleriaDigital.Pantallas
             openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
             openFileDialog.FilterIndex = 1;
             openFileDialog.Multiselect = true;
-                        
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.ImageLocation = openFileDialog.FileName;
-                                         
-            } 
+
+            }
 
 
-                                  
+
         }
 
 
@@ -53,32 +55,48 @@ namespace CarteleriaDigital.Pantallas
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             if ((textBox1.Text == ""))
             {
                 MessageBox.Show("Falta ingresar el nombre de la campaña", "Advertencia");
-                
+
             }
 
 
             else
             {
+               //para guardar UN pictureBox en disco
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Image.Save(saveFileDialog1.FileName, ImageFormat.Jpeg);
+                    
+                
+            }
+
                 MessageBox.Show("La campaña ha sido agregada exitosamente", "Atención", MessageBoxButtons.OK);
                 this.Close();
                 Campaña abrir = new Campaña();
                 abrir.Show();
-                this.SetVisibleCore(false);
+
+                saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = "C:/Imágenes";
+                saveFileDialog1.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+                saveFileDialog1.FilterIndex = 1;
+
+
+
+               
 
 
             }
 
-               /* AgregarCampaña cerrar = new AgregarCampaña();
-                cerrar.Hide();
-                this.SetVisibleCore(false);
 
-                Campaña abrir = new Campaña();
-                abrir.Show(); */
+
+
+
+    }
+
             
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -178,40 +196,55 @@ namespace CarteleriaDigital.Pantallas
 
         }
 
-        
-       /*  private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-         {
-             //var img = pictureBox1.Image;
-             //if (img == null) return;
-             //if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
-             //{
-             //    pictureBox1.Image = null;
-             //}
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e) 
+        {
+            
+        }
 
-             PictureBox pb = (PictureBox)sender;
-             pb.Select();
-             pb.DoDragDrop(pb.Image, DragDropEffects.Move);
+        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
+        {
 
-         }
+        }
 
-         private void pictureBox1_DragEnter(object sender, DragEventArgs e)
-         {
-             if (e.Data.GetDataPresent(DataFormats.Bitmap))
-             {
-                 e.Effect = DragDropEffects.Move;
-             }
-             else
-             {
-                 e.Effect = DragDropEffects.None;
-             }
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
 
-         }
+        }
 
-         private void pictureBox1_DragDrop(object sender, DragEventArgs e)
-         {
-             PictureBox pb = (PictureBox)sender;
-             pb.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
 
-         } */
+        /*  private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+          {
+              //var img = pictureBox1.Image;
+              //if (img == null) return;
+              //if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
+              //{
+              //    pictureBox1.Image = null;
+              //}
+
+              PictureBox pb = (PictureBox)sender;
+              pb.Select();
+              pb.DoDragDrop(pb.Image, DragDropEffects.Move);
+
+          }
+
+          private void pictureBox1_DragEnter(object sender, DragEventArgs e)
+          {
+              if (e.Data.GetDataPresent(DataFormats.Bitmap))
+              {
+                  e.Effect = DragDropEffects.Move;
+              }
+              else
+              {
+                  e.Effect = DragDropEffects.None;
+              }
+
+          }
+
+          private void pictureBox1_DragDrop(object sender, DragEventArgs e)
+          {
+              PictureBox pb = (PictureBox)sender;
+              pb.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+
+          } */
     }
 }
