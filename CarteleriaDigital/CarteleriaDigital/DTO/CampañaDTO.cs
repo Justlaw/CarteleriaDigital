@@ -58,6 +58,19 @@ namespace CarteleriaDigital.DTO
                 activo = value;
             }
         }
+
+        public String Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+
+            set
+            {
+                nombre = value;
+            }
+        }
         #endregion
 
     }

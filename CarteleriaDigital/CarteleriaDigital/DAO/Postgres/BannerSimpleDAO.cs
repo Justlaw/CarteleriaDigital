@@ -4,37 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using CarteleriaDigital.DTO;
 
 namespace CarteleriaDigital.DAO
 {
     class BannerSimpleDAO
     {
-        public void insertar(Conexion con, BannerSimple banS)
+        private Conexion iConexion;
+
+        public BannerSimpleDAO(Conexion pConexion)
+        {
+            this.iConexion = pConexion;
+
+        }
+
+        public void insertar(BannerSimpleDTO bsDTO)
         {
             try
             {
-                con.openConection();
+                //VER COMO TRATAMOS ESTA INSERCION EN LA BASE DE DATOS <<<<<<<<<<<<<<<<<<<<<<<<<<< NO ESTA TERMINADO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                iConexion.openConection();
                 // Create insert command.
                 NpgsqlCommand command = new NpgsqlCommand("INSERT INTO " +
-                    "rango(nombre, activo, Text) VALUES(:nombre, :activo, :Text)", con.connection);
-                // Add paramaters.
-                command.Parameters.Add(new NpgsqlParameter("nombre",
-                    NpgsqlTypes.NpgsqlDbType.Varchar));
-                command.Parameters.Add(new NpgsqlParameter("activo",
-                    NpgsqlTypes.NpgsqlDbType.Boolean));
-                command.Parameters.Add(new NpgsqlParameter("Text",
-                    NpgsqlTypes.NpgsqlDbType.Varchar));
+                    "banner(nombre, activo, Text) VALUES(:nombre, :activo, :Text)", iConexion.connection);
+                command = new NpgsqlCommand("INSERT INTO " +
+                    "bannersimple(nombre, activo, Text) VALUES(:nombre, :activo, :Text)", iConexion.connection);
 
-
-                // Prepare the command.
-                command.Prepare();
-
-                // Add value to the paramater.
-                command.Parameters[0].Value = banS.Nombre;
-                command.Parameters[1].Value = banS.Activo;
-                command.Parameters[2].Value = banS.Text;
-
-
+                command.Parameters.AddWithValue("@id", bsDTO.IdBanner);
+                command.Parameters.AddWithValue("@idnombre", bsDTO.Nombre);
+                command.Parameters.AddWithValue("@activo", bsDTO.Activo);
+                command.Parameters.AddWithValue("@Text", bsDTO.Texto);
 
                 // Execute SQL command.
                 Int32 recordAffected = command.ExecuteNonQuery();
@@ -48,7 +47,7 @@ namespace CarteleriaDigital.DAO
                 //Mostrar error
             }
 
-            con.closeConection();
+            iConexion.closeConection();
         }
     }
 }

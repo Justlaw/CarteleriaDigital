@@ -21,7 +21,7 @@ namespace CarteleriaDigital.DAO
         }
 
 
-        public void insertar(RangoDTO ranDto)
+        public void insertar(RangoDTO ranDTO)
         {
             try
             {
@@ -30,24 +30,10 @@ namespace CarteleriaDigital.DAO
                 NpgsqlCommand command = new NpgsqlCommand("INSERT INTO " +
                     "rango(fechainicio, fechafin, horainicio, horafin) VALUES(:fechainicio, :fechafin, :horainicio, :horafin)", this.iConexion.connection);
 
-                // Add paramaters.
-                command.Parameters.Add(new NpgsqlParameter("fechainicio",
-                    NpgsqlTypes.NpgsqlDbType.Date));
-                command.Parameters.Add(new NpgsqlParameter("fechafin",
-                    NpgsqlTypes.NpgsqlDbType.Date));
-                command.Parameters.Add(new NpgsqlParameter("horainicio",
-                   NpgsqlTypes.NpgsqlDbType.Time));
-                command.Parameters.Add(new NpgsqlParameter("horafin",
-                   NpgsqlTypes.NpgsqlDbType.Time));
-
-                // Prepare the command.
-                command.Prepare();
-
-                // Add value to the paramater.
-                command.Parameters[0].Value = ranDto.FechaInicio;
-                command.Parameters[1].Value = ranDto.FechaFin.Date;
-                command.Parameters[2].Value = ranDto.HoraInicio.TimeOfDay;
-                command.Parameters[3].Value = ranDto.HoraFin.TimeOfDay;
+                command.Parameters.AddWithValue("@fechainicio", ranDTO.FechaInicio);
+                command.Parameters.AddWithValue("@fechafin", ranDTO.FechaFin);
+                command.Parameters.AddWithValue("@horainicio", ranDTO.HoraInicio);
+                command.Parameters.AddWithValue("@horafin", ranDTO.HoraFin);
 
 
                 // Execute SQL command.
@@ -65,34 +51,21 @@ namespace CarteleriaDigital.DAO
             iConexion.closeConection();
         }
 
-        public void Modificar(Conexion con, Rango ran, String nombre)
+        public void Modificar(RangoDTO ranDTO)
         {
-            con.openConection();
+            iConexion.openConection();
 
             try
             {
                 // Create update command.
-                NpgsqlCommand command = new NpgsqlCommand("UPDATE rango " +
-                    "SET fechainicio = :fechainicio, fechafin = :fechafin, horainicio = :horainicio, horafin = :horafin WHERE id = :id",
-                    con.connection);
+                NpgsqlCommand command = new NpgsqlCommand(@"UPDATE rango " +
+                    "SET fechainicio = @fechainicio, fechafin = @fechafin, horainicio = @horainicio, horafin = @horafin WHERE idRango = " + ranDTO.IdRango, iConexion.connection);
 
-                command.Parameters.Add(new NpgsqlParameter("fechainicio",
-                    NpgsqlTypes.NpgsqlDbType.Date));
-                command.Parameters.Add(new NpgsqlParameter("fechafin",
-                    NpgsqlTypes.NpgsqlDbType.Date));
-                command.Parameters.Add(new NpgsqlParameter("horainicio",
-                   NpgsqlTypes.NpgsqlDbType.Time));
-                command.Parameters.Add(new NpgsqlParameter("horafin",
-                   NpgsqlTypes.NpgsqlDbType.Time));
-
-                // Prepare the command.
-                command.Prepare();
-
-                // Add value to the paramater.
-                command.Parameters[0].Value = ran.FechaInicio.Date;
-                command.Parameters[1].Value = ran.FechaFin.Date;
-                command.Parameters[2].Value = ran.HoraInicio.TimeOfDay;
-                command.Parameters[3].Value = ran.HoraFin.TimeOfDay;
+                // Add paramaters.
+                command.Parameters.AddWithValue("@fechainicio", ranDTO.FechaInicio);
+                command.Parameters.AddWithValue("@fechafin", ranDTO.FechaFin);
+                command.Parameters.AddWithValue("@horainicio", ranDTO.HoraInicio);
+                command.Parameters.AddWithValue("@horafin", ranDTO.HoraFin);
 
                 // Execute SQL command.
                 int recordAffected = command.ExecuteNonQuery();
@@ -106,7 +79,9 @@ namespace CarteleriaDigital.DAO
                 //showError(ex);
             }
 
-            con.closeConection();
+            iConexion.closeConection();
         }
+
+
     }
 }
