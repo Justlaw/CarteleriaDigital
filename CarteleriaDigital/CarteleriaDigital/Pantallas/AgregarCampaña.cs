@@ -62,18 +62,26 @@ namespace CarteleriaDigital.Pantallas
 
             }
 
-
             else
             {
                //para guardar UN pictureBox en disco
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    pictureBox1.Image.Save(saveFileDialog1.FileName, ImageFormat.Jpeg);
-                    
-                
-            }
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
+                    // pictureBox1.Image.Save(saveFileDialog1.FileName, ImageFormat.Jpeg);
+                   int  Numimagen = 1;
+                        if (pictureBox1.Image != null) { pictureBox1.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox2.Image != null) { pictureBox2.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox3.Image != null) { pictureBox3.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox4.Image != null) { pictureBox4.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox5.Image != null) { pictureBox5.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox6.Image != null) { pictureBox6.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox7.Image != null) { pictureBox7.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox8.Image != null) { pictureBox8.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox9.Image != null) { pictureBox9.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
+                        if (pictureBox10.Image != null) { pictureBox10.Image.Save(saveFileDialog1.FileName + Numimagen.ToString() + ".jpg", ImageFormat.Jpeg); Numimagen++; }
 
                 MessageBox.Show("La campaña ha sido agregada exitosamente", "Atención", MessageBoxButtons.OK);
+                }
+                
                 this.Close();
                 Campaña abrir = new Campaña();
                 abrir.Show();
@@ -81,19 +89,11 @@ namespace CarteleriaDigital.Pantallas
                 saveFileDialog1 = new SaveFileDialog();
                 saveFileDialog1.InitialDirectory = "C:/Imágenes";
                 saveFileDialog1.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-                saveFileDialog1.FilterIndex = 1;
-
-
-
-               
+                                            
 
 
             }
-
-
-
-
-
+            
     }
 
             
