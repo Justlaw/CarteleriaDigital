@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarteleriaDigital.Pantallas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace CarteleriaDigital
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ElegirBanner abrir = new ElegirBanner();
+            PanBanner abrir = new PanBanner();
             abrir.Show();
             this.SetVisibleCore(false);
         }
