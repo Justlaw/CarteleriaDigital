@@ -64,6 +64,7 @@ namespace CarteleriaDigital.Pantallas
 
             else
             {
+                
                //para guardar UN pictureBox en disco
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
                     // pictureBox1.Image.Save(saveFileDialog1.FileName, ImageFormat.Jpeg);
@@ -89,15 +90,16 @@ namespace CarteleriaDigital.Pantallas
                 saveFileDialog1 = new SaveFileDialog();
                 saveFileDialog1.InitialDirectory = "C:/Imágenes";
                 saveFileDialog1.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
-                                            
+                                      
 
 
             }
-            
-    }
 
             
+            
+        }
 
+                   
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = null;            
