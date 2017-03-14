@@ -28,5 +28,17 @@ namespace CarteleriaDigital.Pantallas
             txtNombre.ReadOnly = true;
             txtURL.ReadOnly = false;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("¿Está seguro que desea cancelar?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+
+                PanBanner abrir = new PanBanner();
+                abrir.Show();
+            }                                        
+        }
     }
 }

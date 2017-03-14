@@ -41,8 +41,9 @@ namespace CarteleriaDigital.Pantallas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CrearBanner crearBanner = new CrearBanner();
-            crearBanner.Show();
+            CrearBanner abrir = new CrearBanner();
+            abrir.Show();
+            this.SetVisibleCore(false);
         }
     }
 }
