@@ -77,5 +77,39 @@ namespace CarteleriaDigital.DAO
             iConexion.closeConection();
         }
 
+        public List<Campania> Listar(String Where)
+        {
+            List<Campania> listaCamp = new List<Campania>();
+
+            iConexion.openConection();
+
+            try
+            {
+                // Create select command.
+                NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM " +
+                    "campaña, imagen" + Where + " ORDER BY id ASC", iConexion.connection);
+
+                // Prepare the command.
+                command.Prepare();
+
+                // Execute SQL command.
+                NpgsqlDataReader dr = command.ExecuteReader();
+
+                // Fill results to music list.
+                while (dr.Read())
+                {
+                    //listaCamp.Add(new Campania(dr.GetString(1), dr.GetInt32(0), dr. , ,));
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+
+            }
+
+            iConexion.closeConection();
+
+            return listaCamp;
+
+        }
     }
 }
