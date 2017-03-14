@@ -67,6 +67,12 @@
     <Compile Include="DTO\CampañaDTO.cs" />
     <Compile Include="DTO\ImagenDTO.cs" />
     <Compile Include="DTO\RangoDTO.cs" />
+    <Compile Include="Pantallas\Campaña_OR_Banner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Campaña_OR_Banner.Designer.cs">
+      <DependentUpon>Campaña_OR_Banner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\CrearBanner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Pantallas\Campaña_OR_Banner.resx">
+      <DependentUpon>Campaña_OR_Banner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\CrearBanner.resx">
       <DependentUpon>CrearBanner.cs</DependentUpon>
     </EmbeddedResource>

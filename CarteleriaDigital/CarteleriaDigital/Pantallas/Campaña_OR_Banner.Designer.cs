@@ -1,16 +1,16 @@
-﻿namespace CarteleriaDigital
+﻿namespace CarteleriaDigital.Pantallas
 {
-    partial class PantallaInicio
+    partial class Campaña_OR_Banner
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,15 +20,14 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicio));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,60 +37,57 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 46);
+            this.button1.Location = new System.Drawing.Point(39, 55);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 67);
+            this.button1.Size = new System.Drawing.Size(105, 64);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Administrativa";
+            this.button1.Text = "Campaña";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(146, 46);
+            this.button2.Location = new System.Drawing.Point(188, 55);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 67);
+            this.button2.Size = new System.Drawing.Size(105, 64);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Operativa";
+            this.button2.Text = "Banner";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.ForeColor = System.Drawing.Color.Teal;
-            this.button3.Location = new System.Drawing.Point(197, 215);
+            this.button3.Location = new System.Drawing.Point(240, 226);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Salir";
+            this.button3.Text = "Atrás";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.groupBox1.Location = new System.Drawing.Point(7, 28);
+            this.groupBox1.Location = new System.Drawing.Point(22, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(265, 159);
+            this.groupBox1.Size = new System.Drawing.Size(324, 170);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Inicio";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBox1.Text = "Seleccionar...";
             // 
-            // PantallaInicio
+            // Campaña_OR_Banner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(368, 271);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button3);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PantallaInicio";
+            this.Name = "Campaña_OR_Banner";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bienvenido";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Seleccionar...";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

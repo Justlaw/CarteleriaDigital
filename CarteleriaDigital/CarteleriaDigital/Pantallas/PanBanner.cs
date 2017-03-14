@@ -28,7 +28,7 @@ namespace CarteleriaDigital.Pantallas
                     cerrar.Hide();
                     this.SetVisibleCore(false);
 
-                    ElegirBanner abrir = new ElegirBanner();
+                    Campaña_OR_Banner abrir = new Campaña_OR_Banner();
                     abrir.Show();
                 }
            

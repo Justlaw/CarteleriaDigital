@@ -35,7 +35,7 @@ namespace CarteleriaDigital
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Campaña abrir = new Campaña();
+            Campaña_OR_Banner abrir = new Campaña_OR_Banner();
             abrir.Show();
             this.SetVisibleCore(false);
         }

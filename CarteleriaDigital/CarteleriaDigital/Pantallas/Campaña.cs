@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarteleriaDigital.Pantallas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +28,7 @@ namespace CarteleriaDigital
                 cerrar.Hide();
                 this.SetVisibleCore(false);
 
-                PantallaInicio abrir = new PantallaInicio();
+                Campaña_OR_Banner abrir = new Campaña_OR_Banner();
                 abrir.Show();
             }
         }
