@@ -97,12 +97,18 @@
     <Compile Include="Pantallas\Eliminar.Designer.cs">
       <DependentUpon>Eliminar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Pantallas\Campaña.cs">
+    <Compile Include="Pantallas\PanOperativa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantallas\Campaña.Designer.cs">
-      <DependentUpon>Campaña.cs</DependentUpon>
+    <Compile Include="Pantallas\PanOperativa.Designer.cs">
+      <DependentUpon>PanOperativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Pantallas\PanCampaña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\PanCampaña.Designer.cs">
+      <DependentUpon>PanCampaña.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\PanBanner.cs">
       <SubType>Form</SubType>
@@ -137,14 +143,17 @@
     <EmbeddedResource Include="Pantallas\AgregarCampaña.resx">
       <DependentUpon>AgregarCampaña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\Campaña.resx">
-      <DependentUpon>Campaña.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas\PanCampaña.resx">
+      <DependentUpon>PanCampaña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\Eliminar.resx">
       <DependentUpon>Eliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\PanBanner.resx">
       <DependentUpon>PanBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\PanOperativa.resx">
+      <DependentUpon>PanOperativa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\pantallaInicio.resx">
       <DependentUpon>PantallaInicio.cs</DependentUpon>

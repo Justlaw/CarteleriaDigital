@@ -20,7 +20,7 @@ namespace CarteleriaDigital
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PanBanner abrir = new PanBanner();
+            Pantallas.PanOperativa abrir = new Pantallas.PanOperativa();
             abrir.Show();
             this.SetVisibleCore(false);
         }
