@@ -161,6 +161,25 @@ namespace CarteleriaDigital.Pantallas
         {
 
         }
-                
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = "C:/Imágenes";
+            openFileDialog.Filter = "Archivos de Imagen (*.jpg)(*.jpeg)|*.jpg;*jpeg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.Multiselect = true;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = openFileDialog.FileName; 
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

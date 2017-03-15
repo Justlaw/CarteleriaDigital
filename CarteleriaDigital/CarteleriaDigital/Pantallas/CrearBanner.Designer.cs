@@ -230,9 +230,9 @@
             // btnAceptar
             // 
             this.btnAceptar.ForeColor = System.Drawing.Color.Teal;
-            this.btnAceptar.Location = new System.Drawing.Point(358, 346);
+            this.btnAceptar.Location = new System.Drawing.Point(462, 346);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(75, 38);
             this.btnAceptar.TabIndex = 18;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -240,9 +240,9 @@
             // btnCancelar
             // 
             this.btnCancelar.ForeColor = System.Drawing.Color.Teal;
-            this.btnCancelar.Location = new System.Drawing.Point(462, 346);
+            this.btnCancelar.Location = new System.Drawing.Point(359, 346);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(84, 38);
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
