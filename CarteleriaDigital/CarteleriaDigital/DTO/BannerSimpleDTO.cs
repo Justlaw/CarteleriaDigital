@@ -37,7 +37,7 @@ namespace CarteleriaDigital.DTO
             }
         }
 
-        public int? IdBanner
+        public new int? IdBanner
         {
             get
             {

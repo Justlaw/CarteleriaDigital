@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarteleriaDigital.DTO
 {
-    class BannerRSSDTO
+    class BannerRSSDTO : Banner
     {
 
         #region Atributos

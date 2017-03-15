@@ -12,22 +12,22 @@ namespace CarteleriaDigital
 
         public BannerSimple(String pText, Boolean pActivo, String pNombre, Rango pRango)
         {
-            this.iActivo = pActivo;
-            this.iNombre = pNombre;
+            base.Activo = pActivo;
+            base.Nombre = pNombre;
             this.iText = pText;
-            this.iRango = pRango;
+            base.Rango = pRango;
         }
 
-        public Boolean Activo
+        public new Boolean Activo
         {
             get { return this.iActivo; }
             set { this.iActivo = value; }
         }
 
-        public String Nombre
+        public new string Nombre
         {
-            get { return this.iNombre; }
-            set { this.iNombre = value; }
+            get { return base.Nombre; }
+            set { base.Nombre = value; }
         }
 
         public String Text
@@ -36,10 +36,10 @@ namespace CarteleriaDigital
             set { this.iText = value; }
         }
 
-        public Rango Rango
+        public new Rango Rango
         {
-            get { return this.iRango; }
-            set { iRango = value; }
+            get { return base.Rango; }
+            set { base.Rango = value; }
         }
     }
 }

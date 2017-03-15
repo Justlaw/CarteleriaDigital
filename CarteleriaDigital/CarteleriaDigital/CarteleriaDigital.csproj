@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\ControladorBanners.cs" />
+    <Compile Include="Controladores\ControladorCampañas.cs" />
     <Compile Include="DAO\IBanner.cs" />
     <Compile Include="DAO\IBannerRSS.cs" />
     <Compile Include="DAO\IBannerSimple.cs" />
@@ -82,7 +84,7 @@
     <Compile Include="Clase\Banner.cs" />
     <Compile Include="Clase\BannerRSS.cs" />
     <Compile Include="Clase\BannerSimple.cs" />
-    <Compile Include="Clase\Campania.cs" />
+    <Compile Include="Clase\Campaña.cs" />
     <Compile Include="Clase\FuenteRSS.cs" />
     <Compile Include="Clase\Imagen.cs" />
     <Compile Include="Pantallas\AgregarCampaña.cs">

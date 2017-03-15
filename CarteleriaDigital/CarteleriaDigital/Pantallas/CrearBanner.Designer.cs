@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTexto = new System.Windows.Forms.TextBox();
+            this.lblTexto = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtURL = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdB_BannerSimple = new System.Windows.Forms.RadioButton();
+            this.rdB_BannerRSS = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,12 +52,12 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNombre.Location = new System.Drawing.Point(84, 30);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 0;
             // 
             // label1
             // 
@@ -68,21 +68,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre:";
             // 
-            // txtNombre
+            // txtTexto
             // 
-            this.txtNombre.Location = new System.Drawing.Point(84, 88);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(453, 20);
-            this.txtNombre.TabIndex = 2;
+            this.txtTexto.Location = new System.Drawing.Point(84, 88);
+            this.txtTexto.Name = "txtTexto";
+            this.txtTexto.Size = new System.Drawing.Size(453, 20);
+            this.txtTexto.TabIndex = 2;
             // 
-            // label2
+            // lblTexto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre:";
+            this.lblTexto.AutoSize = true;
+            this.lblTexto.Location = new System.Drawing.Point(31, 91);
+            this.lblTexto.Name = "lblTexto";
+            this.lblTexto.Size = new System.Drawing.Size(37, 13);
+            this.lblTexto.TabIndex = 3;
+            this.lblTexto.Text = "Texto:";
             // 
             // label3
             // 
@@ -100,29 +100,29 @@
             this.txtURL.Size = new System.Drawing.Size(453, 20);
             this.txtURL.TabIndex = 4;
             // 
-            // radioButton1
+            // rdB_BannerSimple
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(84, 65);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(93, 17);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Banner Simple";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdB_BannerSimple.AutoSize = true;
+            this.rdB_BannerSimple.Location = new System.Drawing.Point(84, 65);
+            this.rdB_BannerSimple.Name = "rdB_BannerSimple";
+            this.rdB_BannerSimple.Size = new System.Drawing.Size(93, 17);
+            this.rdB_BannerSimple.TabIndex = 6;
+            this.rdB_BannerSimple.TabStop = true;
+            this.rdB_BannerSimple.Text = "Banner Simple";
+            this.rdB_BannerSimple.UseVisualStyleBackColor = true;
+            this.rdB_BannerSimple.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // rdB_BannerRSS
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(175, 65);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 17);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Banner RSS";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rdB_BannerRSS.AutoSize = true;
+            this.rdB_BannerRSS.Location = new System.Drawing.Point(175, 65);
+            this.rdB_BannerRSS.Name = "rdB_BannerRSS";
+            this.rdB_BannerRSS.Size = new System.Drawing.Size(84, 17);
+            this.rdB_BannerRSS.TabIndex = 7;
+            this.rdB_BannerRSS.TabStop = true;
+            this.rdB_BannerRSS.Text = "Banner RSS";
+            this.rdB_BannerRSS.UseVisualStyleBackColor = true;
+            this.rdB_BannerRSS.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label4
             // 
@@ -230,6 +230,7 @@
             this.btnAceptar.TabIndex = 18;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -239,6 +240,7 @@
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // CrearBanner
             // 
@@ -249,14 +251,14 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdB_BannerRSS);
+            this.Controls.Add(this.rdB_BannerSimple);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtURL);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.lblTexto);
+            this.Controls.Add(this.txtTexto);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
             this.Name = "CrearBanner";
             this.Text = "CrearBanner";
             this.groupBox1.ResumeLayout(false);
@@ -270,14 +272,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTexto;
+        private System.Windows.Forms.Label lblTexto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtURL;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdB_BannerSimple;
+        private System.Windows.Forms.RadioButton rdB_BannerRSS;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
