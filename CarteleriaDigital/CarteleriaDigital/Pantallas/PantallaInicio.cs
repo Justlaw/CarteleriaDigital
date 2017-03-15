@@ -20,7 +20,7 @@ namespace CarteleriaDigital
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PanBanner abrir = new PanBanner();
+            Pantallas.PanOperativa abrir = new Pantallas.PanOperativa();
             abrir.Show();
             this.SetVisibleCore(false);
         }
@@ -35,7 +35,7 @@ namespace CarteleriaDigital
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Campaña abrir = new Campaña();
+            Campaña_OR_Banner abrir = new Campaña_OR_Banner();
             abrir.Show();
             this.SetVisibleCore(false);
         }

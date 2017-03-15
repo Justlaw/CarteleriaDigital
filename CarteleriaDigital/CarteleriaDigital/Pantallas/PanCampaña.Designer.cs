@@ -86,6 +86,7 @@
             this.button4.TabIndex = 3;
             this.toolTip1.SetToolTip(this.button4, "Modificar Campaña");
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -98,6 +99,7 @@
             this.button5.TabIndex = 4;
             this.toolTip1.SetToolTip(this.button5, "Vista Previa Campaña");
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Campaña
             // 
