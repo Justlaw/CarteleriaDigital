@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarteleriaDigital.Controladores
 {
-    static class ControladorCampañas
+    class ControladorCampañas
     {
-        List<Campaña> listaCampañas
+        List<Campaña> campañas = new List<Campaña>();
+
     }
 }

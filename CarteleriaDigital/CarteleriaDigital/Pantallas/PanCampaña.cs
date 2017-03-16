@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CarteleriaDigital
 {
-    public partial class Campaña : Form
+    public partial class PanCampaña : Form
     {
-        public Campaña()
+        public PanCampaña()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace CarteleriaDigital
             {
                 this.SetVisibleCore(false);
 
-                Campaña cerrar = new Campaña();
+                PanCampaña cerrar = new PanCampaña();
                 cerrar.Hide();
                 this.SetVisibleCore(false);
 
